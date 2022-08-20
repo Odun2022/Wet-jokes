@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 h1 {
@@ -45,6 +46,14 @@ a {
     color: var(--color-1);
 }
 
+.container::before {
+    content: url(./Images/fork.jpg);
+    color: var(--bg-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .container {
     height: 75vh;
     width: 60vw;
@@ -53,7 +62,6 @@ a {
     border-radius: 10px;
     text-align: center;
     padding-block: 50px;
-    position: relative;
 }
 
 #joke {
@@ -85,21 +93,12 @@ a {
     font-size: var(--font-size-1);
     word-spacing: 3px;
     margin: 2rem;
-    transition: transform .4s ease-in;
-    
+    transition: transform .4s ease-in;   
 }
 
 .btn:hover {
     cursor: pointer;
     transform: scale(1.2);
-}
-
-/* Image */
-img .fork {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: var(--bg-color);
 }
 
 /* Social Icons */
@@ -111,20 +110,44 @@ img .fork {
     gap: 2rem;
 }
 
-.social-icons i {
-    padding: 10px;
-    background-color: rgb(245, 241, 241);
-    border-radius: 60%;
-    font-size: 25px;
-    transition: transform .5s;
+.social-icons a i {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
     color: #000;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+    transition: 0.5s;
+    transform: translate(0,0);
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 50%);
 }
 
-.social-icons i:hover {
-    background: rgb(235, 120, 235);
-    transform: scale(1.5);
-    box-shadow: 0 0 5px #000;
-    color: var(--color-1);
+div i:hover{
+    position: relative;
+    bottom: 15px;
+    transition: .5s ease-in-out;
+}
+
+.fb:hover {
+    background-color: #3b5998;  
+    color: #fff;
+}
+
+.tweet:hover {
+    background-color: #00acee;
+    color: #fff;
+}
+
+.wapp:hover {
+    color: #fff;
+    background-color: 	#25D366;
+}
+
+.link:hover {
+    background-color: #0e76a8;
+    color: #fff;
 }
 
 .line {
@@ -140,7 +163,7 @@ img .fork {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
+@media (min-width: 850px) and (max-width: 1024px8) {
     .container {
         height: 80vh;
         width: 65vw;
