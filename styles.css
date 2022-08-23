@@ -30,7 +30,7 @@ body {
     font-family: inherit;
     font-size: var(--font-size-3);
     font-weight: bold;
-    width: 70%;
+    max-width: 500px;
     margin: 30px auto;
 }
 
@@ -55,8 +55,7 @@ a {
 } */
 
 .container {
-    width: 800px;
-    max-width: 100%;
+    min-width: 300px;
     background-color: var(--color-1);
     border-radius: 10px;
     text-align: center;
@@ -65,6 +64,13 @@ a {
 }
 
 /* Button */
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
 .btn {
     padding: 10px 20px;
     background-color: var(--bg-color);
@@ -90,12 +96,12 @@ a {
     font-size: var(--font-size-1);
     border-radius: 10px;
     box-shadow: 0 0 5px rgb(104, 98, 98), 0 0 15px rgb(133, 133, 133);
-    margin-left: 30px;
+    margin-left: 0px;
 }
 
 /* Social Icons */
 .social-icons {
-    margin: 10px;
+    margin: 30px 10px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,7 +219,7 @@ div i:hover{
     }
 } */
 
-/* @media (max-width:700px) {
+/* @media (min-width:40em) {
     .container {
         height: 50vh;
         width: 70vw;
@@ -276,11 +282,11 @@ div i:hover{
 } */
 
 
-@media (max-width: 650px) {
+/* @media (max-width: 700px) { */
     /* body {
         overflow-x: hidden;
     } */
-    .container {
+    /* .container {
         height: auto;
         width: 100vw;
         background-color: var(--color-1);
@@ -292,13 +298,13 @@ div i:hover{
         font-size: 16px;
     }
     .first {
-        font-size: var(--font-size-1);
+        font-size: var(--font-size-2);
         font-weight: bold;
         width: 90%;
     }
     
     .btn {
-        padding: 10px;
+        padding: 8px 10px;
         background-color: var(--bg-color);
         border-radius: 10px;
         width: 50%;
@@ -306,7 +312,7 @@ div i:hover{
         border: 2px solid transparent;
         font-size: var(--font-size-3);
         word-spacing: 3px;
-        margin: 1rem 0 2rem;
+        margin: 1rem 0 1rem;
         transition: transform .4s ease-in;
     }
     .button {
@@ -319,8 +325,9 @@ div i:hover{
         font-size: 16px;
     }
     .github-fork-ribbon {
-        margin-left: 5px;
-        width: 65%;
+        padding: 10px 15px;
+        margin: 0 5px;
+        width: 50%;
     }
     p {
         font-family: "Fira Code", sans-serif;
@@ -343,4 +350,4 @@ div i:hover{
         font-size: 30px;
     }
     
-}
+} */
