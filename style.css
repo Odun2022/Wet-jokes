@@ -28,9 +28,8 @@ body {
 
 .first {
     font-family: inherit;
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-2);
     font-weight: bold;
-    width: 70%;
     margin: 30px auto;
 }
 
@@ -55,8 +54,7 @@ a {
 } */
 
 .container {
-    width: 800px;
-    max-width: 100%;
+    min-width: 200px;
     background-color: var(--color-1);
     border-radius: 10px;
     text-align: center;
@@ -65,6 +63,13 @@ a {
 }
 
 /* Button */
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
 .btn {
     padding: 10px 20px;
     background-color: var(--bg-color);
@@ -85,17 +90,17 @@ a {
 
 .github-fork-ribbon {
     background-color: var(--bg-color-2);
-    padding: 10px 15px;
+    padding: 10px;
     border: 2px solid transparent;
     font-size: var(--font-size-1);
     border-radius: 10px;
     box-shadow: 0 0 5px rgb(104, 98, 98), 0 0 15px rgb(133, 133, 133);
-    margin-left: 30px;
+    margin-left: 0px;
 }
 
 /* Social Icons */
 .social-icons {
-    margin: 10px;
+    margin: 30px 10px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,44 +218,36 @@ div i:hover{
     }
 } */
 
-/* @media (max-width:700px) {
+@media (min-width:650px) {
     .container {
-        height: 50vh;
-        width: 70vw;
-        background-color: var(--color-1);
-        border-radius: 10px;
-        text-align: center;
-        padding-block: 50px;
+        height: auto;
+        width: 60vw;
     }
-    h1 {
-        font-family: "Fira Code", sans-serif;
-        font-size: var(--font-size-3);
-        font-weight: bold;
-        margin: auto;
+   .first {
+        font-size: var(--font-size-2);
+    
     }
-   
+    /* .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 500px;
+    } */
     .btn {
-        padding: 15px 20px;
-        background-color: var(--bg-color);
-        border-radius: 30px;
-        width: 50%;
-        outline: none;
-        border: 2px solid transparent;
-        box-shadow: 0 0 5px #000, 0 0 15px #858585;
-        font-size: var(--font-size-3);
-        word-spacing: 3px;
-        margin: 2rem 0 2rem;
-        transition: transform .4s ease-in;
+        font-size: var(--font-size-1);
+    }
+    .github-fork-ribbon {
+        display: inline;
     }
     p {
         font-family: "Fira Code", sans-serif;
-        color: var(--color-2);
-        font-size: var(--font-size-2);
-        font-weight: 600;
+        color: var(--color-1);
+        font-size: 22px;
+        font-weight: 500;
         letter-spacing: 2px;
     }
     .social-icons {
-        margin: 20px 10px 20px;
+        margin: 20px 5px 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -262,22 +259,25 @@ div i:hover{
         border-radius: 100%;
         font-size: 30px;
     }
-} */
+}
 
-@media (min-width: 500px) and (max-width: 650px) {
+/* @media (min-width: 500px) and (max-width: 650px) {
     .container {
         height: 70vh;
-        width: 70vw;
+        width: 85vw;
         background-color: var(--color-1);
         text-align: center;
         border-radius: 10px;
         padding-block: 50px;
     }
-}
+} */
 
 
-@media (max-width: 700px) {
-    .container {
+/* @media (max-width: 700px) { */
+    /* body {
+        overflow-x: hidden;
+    } */
+    /* .container {
         height: auto;
         width: 100vw;
         background-color: var(--color-1);
@@ -289,41 +289,22 @@ div i:hover{
         font-size: 16px;
     }
     .first {
-        font-size: var(--font-size-1);
+        font-size: var(--font-size-2);
         font-weight: bold;
         width: 90%;
     }
+    
     .btn {
-        padding: 10px 20px;
+        padding: 8px 10px;
         background-color: var(--bg-color);
         border-radius: 10px;
+        width: 50%;
         outline: none;
         border: 2px solid transparent;
-        box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 15px rgb(133, 133, 133);
-        font-size: var(--font-size-1);
+        font-size: var(--font-size-3);
         word-spacing: 3px;
-        transition: transform .4s ease-in;  
-        margin-bottom: 15px; 
-    }
-    
-    .btn:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-    
-    .github-fork-ribbon {
-        background-color: var(--bg-color-2);
-        padding: 10px 15px;
-        border: 2px solid transparent;
-        font-size: var(--font-size-1);
-        border-radius: 10px;
-        box-shadow: 0 0 5px rgb(104, 98, 98), 0 0 15px rgb(133, 133, 133);
-        margin-left: 30px;
-    }
-    .btn {
-       font-size: 18px;
-        word-spacing: 3px;
-        margin: 1rem 0 5px;
+        margin: 1rem 0 1rem;
+        transition: transform .4s ease-in;
     }
     .button {
         display: flex;
@@ -331,11 +312,13 @@ div i:hover{
         justify-content: center;
         align-items: center;
     }
+    .btn a {
+        font-size: 16px;
+    }
     .github-fork-ribbon {
-        width: 55%;
-        padding: 10px 0;
-        text-align: center;
-        font-size: var(--font-size-1);
+        padding: 10px 15px;
+        margin: 0 5px;
+        width: 50%;
     }
     p {
         font-family: "Fira Code", sans-serif;
@@ -358,4 +341,4 @@ div i:hover{
         font-size: 30px;
     }
     
-}
+} */
