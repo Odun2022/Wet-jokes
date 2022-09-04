@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 
 :root{
-   --bg-color: rgb(231, 59, 43);
+   --bg-color: #746550;
    --bg-color-2: rgb(73, 53, 51);
    --font-size-1: 16px;
    --font-size-2: 20px;
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: "Fira Code", sans-serif;
+    font-family: "Fira Code", sans-serif, Helvetica;
     background-color: var(--bg-color);
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@ body {
     font-size: var(--font-size-3);
     font-weight: bold;
     width: 70%;
-    margin: 30px auto;
+    margin: 30px auto 0;
 }
 
 p {
@@ -46,14 +46,6 @@ a {
     color: var(--color-1);
 }
 
-/* .container::before {
-    content: url(./Images/fork.jpg);
-    color: var(--bg-color);
-    position: absolute;
-    top: 0;
-    right: 0;
-} */
-
 .container {
     width: 800px;
     max-width: 100%;
@@ -65,22 +57,21 @@ a {
 }
 
 /* Button */
-.btn {
-    padding: 10px 20px;
-    background-color: var(--bg-color);
+.container {
+    margin-bottom: -25px;
+}
+
+#btn {
+    padding: 11px 22px;
+    background-color: #ceb076;
     border-radius: 10px;
     outline: none;
     border: 2px solid transparent;
     box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 15px rgb(133, 133, 133);
     font-size: var(--font-size-1);
     word-spacing: 3px;
-    transition: transform .4s ease-in;  
+    transition: transform 25s ease-in;  
     margin-bottom: 15px; 
-}
-
-.btn:hover {
-    cursor: pointer;
-    transform: scale(1.1);
 }
 
 .github-fork-ribbon {
@@ -154,128 +145,6 @@ div i:hover{
     padding-block: 4px;
 }
 
-/* Media Queries */
-/* @media (min-width: 750px) and (max-width: 1024px) {
-    .container {
-        height: 60vh;
-        width: 65vw;
-        background-color: var(--color-1);
-        border-radius: 10px;
-        text-align: center;
-        padding-block: 50px;
-    }
-    h1 {
-        font-family: "Fira Code", sans-serif;
-        font-size: var(--font-size-3);
-        font-weight: bold;
-        margin: auto;
-    }
-    .first {
-        padding: 10px;
-    }
-    .second {
-        padding-bottom: 1em;
-    }
-    
-    .btn {
-        padding: 15px 20px;
-        background-color: var(--bg-color);
-        border-radius: 30px;
-        width: 50%;
-        outline: none;
-        border: 2px solid transparent;
-        box-shadow: 0 0 5px #000, 0 0 15px #858585;
-        font-size: var(--font-size-3);
-        word-spacing: 3px;
-        margin:  1rem 0 ;
-        transition: transform .4s ease-in;
-    }
-    p {
-        font-family: "Fira Code", sans-serif;
-        color: var(--color-2);
-        font-size: var(--font-size-2);
-        font-weight: 600;
-        letter-spacing: 2px;
-    }
-    .social-icons {
-        margin: 20px 10px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-    .social-icons i {
-        padding: 10px;
-        background-color: rgb(224, 216, 216);
-        border-radius: 100%;
-        font-size: 30px;
-        color: #000;
-    }
-} */
-
-/* @media (max-width:700px) {
-    .container {
-        height: 50vh;
-        width: 70vw;
-        background-color: var(--color-1);
-        border-radius: 10px;
-        text-align: center;
-        padding-block: 50px;
-    }
-    h1 {
-        font-family: "Fira Code", sans-serif;
-        font-size: var(--font-size-3);
-        font-weight: bold;
-        margin: auto;
-    }
-   
-    .btn {
-        padding: 15px 20px;
-        background-color: var(--bg-color);
-        border-radius: 30px;
-        width: 50%;
-        outline: none;
-        border: 2px solid transparent;
-        box-shadow: 0 0 5px #000, 0 0 15px #858585;
-        font-size: var(--font-size-3);
-        word-spacing: 3px;
-        margin: 2rem 0 2rem;
-        transition: transform .4s ease-in;
-    }
-    p {
-        font-family: "Fira Code", sans-serif;
-        color: var(--color-2);
-        font-size: var(--font-size-2);
-        font-weight: 600;
-        letter-spacing: 2px;
-    }
-    .social-icons {
-        margin: 20px 10px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-    .social-icons i {
-        padding: 10px;
-        background-color: rgb(224, 216, 216);
-        border-radius: 100%;
-        font-size: 30px;
-    }
-} */
-
-@media (min-width: 500px) and (max-width: 650px) {
-    .container {
-        height: 70vh;
-        width: 70vw;
-        background-color: var(--color-1);
-        text-align: center;
-        border-radius: 10px;
-        padding-block: 50px;
-    }
-}
-
-
 @media (max-width: 700px) {
     .container {
         height: auto;
@@ -289,11 +158,11 @@ div i:hover{
         font-size: 16px;
     }
     .first {
-        font-size: var(--font-size-1);
+        font-size: var(--font-size-2);
         font-weight: bold;
-        width: 90%;
+        width: 70%;
     }
-    .btn {
+    #btn {
         padding: 10px 20px;
         background-color: var(--bg-color);
         border-radius: 10px;
@@ -306,8 +175,7 @@ div i:hover{
         margin-bottom: 15px; 
     }
     
-    .btn:hover {
-        cursor: pointer;
+    #btn:hover {
         transform: scale(1.1);
     }
     
@@ -318,32 +186,16 @@ div i:hover{
         font-size: var(--font-size-1);
         border-radius: 10px;
         box-shadow: 0 0 5px rgb(104, 98, 98), 0 0 15px rgb(133, 133, 133);
-        margin-left: 30px;
+        margin-right: 30px;
     }
-    .btn {
-       font-size: 18px;
-        word-spacing: 3px;
-        margin: 1rem 0 5px;
-    }
-    .button {
+
+    .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .github-fork-ribbon {
-        width: 55%;
-        padding: 10px 0;
-        text-align: center;
-        font-size: var(--font-size-1);
-    }
-    p {
-        font-family: "Fira Code", sans-serif;
-        color: var(--color-2);
-        font-size: var(--font-size-2);
-        font-weight: 600;
-        letter-spacing: 2px;
-    }
+   
     .social-icons {
         margin: 20px 10px 20px;
         display: flex;
