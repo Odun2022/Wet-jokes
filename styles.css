@@ -61,8 +61,8 @@ a {
     margin-bottom: -25px;
 }
 
-#btn {
-    padding: 11px 22px;
+.btn {
+    padding: 0.7rem 1.6rem;
     background-color: #ceb076;
     border-radius: 10px;
     outline: none;
@@ -162,7 +162,7 @@ div i:hover{
         font-weight: bold;
         width: 70%;
     }
-    #btn {
+    .btn {
         padding: 10px 20px;
         background-color: var(--bg-color);
         border-radius: 10px;
@@ -175,7 +175,7 @@ div i:hover{
         margin-bottom: 15px; 
     }
     
-    #btn:hover {
+    .btn:hover {
         transform: scale(1.1);
     }
     
