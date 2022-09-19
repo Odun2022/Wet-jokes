@@ -5,7 +5,7 @@
    --bg-color-2: rgb(73, 53, 51);
    --font-size-1: 16px;
    --font-size-2: 20px;
-   --font-size-3: 25px;
+   --font-size-3: 30px;
    --color-1: #fff;
    --color-2: rgb(128, 118, 118);
 }
@@ -26,12 +26,13 @@ body {
     height: 100vh;
 }
 
-.first {
+.joke {
     font-family: inherit;
     font-size: var(--font-size-3);
     font-weight: bold;
-    width: 70%;
-    margin: 30px auto 0;
+    margin: 50px auto;
+    line-height: 40px;
+    width: 80%;
 }
 
 p {
@@ -46,39 +47,32 @@ a {
     color: var(--color-1);
 }
 
-.container {
-    width: 800px;
-    max-width: 100%;
+.main-container {
+    box-shadow: 0 40px 20px rgba(0, 0, 0, 0.1), 0 10px 6px rgba(0, 0, 0, 0.1);
     background-color: var(--color-1);
     border-radius: 10px;
     text-align: center;
-    padding-block: 50px;
-  
+    padding: 50px 20px;
+    width: 800px;
+    max-width: 100%;
 }
 
 /* Button */
-.container {
-    margin-bottom: -25px;
-}
-
 .btn {
-    padding: 0.7rem 1.6rem;
+    padding: 14px 40px;
     background-color: #ceb076;
     border-radius: 10px;
-    outline: none;
-    border: 2px solid transparent;
-    box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 15px rgb(133, 133, 133);
+    border: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0), 0 0 15px rgba(133, 133, 133, 0.1);
     font-size: var(--font-size-1);
     word-spacing: 3px;
     transition: transform 25s ease-in;  
-    margin-bottom: 15px; 
+    margin-bottom: 5px;
+    color: #fff;
 }
 
 .github-fork-ribbon {
     background-color: var(--bg-color-2);
-    padding: 10px 15px;
-    border: 2px solid transparent;
-    font-size: var(--font-size-1);
     border-radius: 10px;
     box-shadow: 0 0 5px rgb(104, 98, 98), 0 0 15px rgb(133, 133, 133);
     margin-left: 30px;
@@ -86,7 +80,7 @@ a {
 
 /* Social Icons */
 .social-icons {
-    margin: 10px;
+    margin: 30px 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,10 +90,8 @@ a {
 .social-icons a i {
     width: 50px;
     height: 50px;
-    background-color: #fff;
     border-radius: 50%;
     color: #000;
-    text-align: center;
     font-size: 25px;
     padding-top: 15px;
     transition: 0.5s;
@@ -145,8 +137,19 @@ div i:hover{
     padding-block: 4px;
 }
 
+@media (max-width: 850px) {
+    .main-container {
+        height: auto;
+        width: 80vw;
+        background-color: var(--color-1);
+        border-radius: 10px;
+        text-align: center;
+        padding-block: 50px;
+    }
+}
+
 @media (max-width: 700px) {
-    .container {
+    .main-container {
         height: auto;
         width: 100vw;
         background-color: var(--color-1);
